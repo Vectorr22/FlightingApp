@@ -8,5 +8,7 @@ interface AirportRepository {
 
     suspend fun insertItem(airport: Airport)
 
+    suspend fun updateSearchList(search: String): List<Airport>
 
+    suspend fun getExcludedListOfAirports(iata_code: String): List<Airport>
 }

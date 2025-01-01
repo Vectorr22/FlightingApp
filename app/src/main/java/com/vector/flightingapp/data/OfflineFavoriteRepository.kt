@@ -11,7 +11,11 @@ class OfflineFavoriteRepository(
         return favoriteDao.insertFavorite(favorite)
     }
 
-    override fun getAllFavorites(): Flow<List<Favorite>> {
+    override suspend fun getAllFavorites(): List<Favorite> {
         return favoriteDao.getAllFavorites()
+    }
+
+    override suspend fun deleteFavorite(favorite: Favorite) {
+        return favoriteDao.deleteFavorite(favorite)
     }
 }

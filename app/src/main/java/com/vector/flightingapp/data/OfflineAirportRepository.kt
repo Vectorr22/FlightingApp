@@ -15,4 +15,13 @@ class OfflineAirportRepository(
         return airportDao.insertAirport(airport)
     }
 
+    override suspend fun updateSearchList(search: String): List<Airport> {
+        return airportDao.updateCurrentSearch(search)
+    }
+
+    override suspend fun getExcludedListOfAirports(iata_code: String): List<Airport> {
+        return airportDao.getExcludedListOfAirports(iata_code)
+    }
+
+
 }

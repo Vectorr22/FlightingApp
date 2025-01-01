@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     topBar = { FlightTopAppBar(
-                        title = "MyFlightApp",
+                        title = "My Flights",
                         canNavigateBack = false,
                         onNavigateBack = { /*TODO*/ })}
                 ) { innerPadding ->
